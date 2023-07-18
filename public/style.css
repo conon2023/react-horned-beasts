@@ -15,14 +15,14 @@ h3 {
     font-family: sans-serif;
     justify-content:center;
     text-align: center;
-    color: white;
+    color: black;
 }
 
 h2 {
     font-family: sans-serif;
     justify-content:center;
     text-align: center;
-    color: white;
+    color:rgb(35, 2, 2);
     font-size: 30px;
 }
 
@@ -32,11 +32,10 @@ h1 {
     text-align: center;
     color: rgb(153, 255, 0);
     font-size: 50px;
-    background-color:tomato;
+    background-color:black;
 }
 header {
-    /* background-color:black;
-    color: white; */
+   margin-top: 20px;
    
     
 }
