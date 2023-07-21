@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react";
 
-function Footer() {
-  return <footer>
-   
-      <h1>Chidi Ononye</h1>
-    </footer>;
+function Footer({ title }) {
+  return (
+    <footer>
+      <h2> Chidi Ononye </h2>
+    </footer>
+  );
 }
 
 export default Footer;

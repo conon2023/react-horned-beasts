@@ -3,7 +3,6 @@ import React from "react";
 function Header() {
   return (
     <header>
-     
       <h1>HORNED BEASTS</h1>
     </header>
   );

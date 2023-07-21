@@ -1,12 +1,12 @@
 import React from "react";
-import Main from "./components/Main";
 import Header from "./components/Header";
+import Main from "./components/Main"
 import Footer from "./components/Footer";
-// import HornedBeasts from "./components/Horned-Beasts";
+import Data from "./Data.json";
 
 function App() {
   return (
-    <div className="app">
+    <div className="App">
       <Header />
       <Main />
       <Footer />
