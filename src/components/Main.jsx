@@ -1,11 +1,13 @@
 import React from "react";
 import HornedBeasts from "./Horned-Beasts";
-import Data from "../Data.json";
+import Data from "../Data.json"
 
 
 function Main() {
   return (
-    <main>
+
+    <div className='card--container'>
+     
       <HornedBeasts title = {Data[0].title} image = {Data[0].image_url} description = {Data[0].description}/>
       <HornedBeasts title = {Data[1].title} image = {Data[1].image_url} description = {Data[1].description}/>
       <HornedBeasts title = {Data[2].title} image = {Data[2].image_url} description = {Data[2].description}/>
@@ -27,7 +29,7 @@ function Main() {
       <HornedBeasts title = {Data[18].title} image = {Data[18].image_url} description = {Data[18].description}/>
       <HornedBeasts title = {Data[19].title} image = {Data[19].image_url} description = {Data[19].description}/>
 
-    </main>
+    </div>
   );
 }
 export default Main;

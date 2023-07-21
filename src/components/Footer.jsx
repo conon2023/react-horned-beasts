@@ -3,7 +3,7 @@ import React from "react";
 function Footer({ title }) {
   return (
     <footer>
-      <h2> Chidi Ononye </h2>
+      <h2> &#169; Chidi Ononye </h2>
     </footer>
   );
 }

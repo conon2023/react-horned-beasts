@@ -1,8 +1,9 @@
 import React from "react";
+import '../App.css'
 
 function HornedBeasts({ title, image, description }) {
   return (
-    <div className="main-content">
+    <div className="parent">
       <div>
         <h2>{title}</h2>
         <img src={image} alt={description} className="image-size"></img>
