@@ -2,16 +2,29 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
     grid-column-gap: 25px;
     grid-row-gap: 25px;  
+    background-color:salmon;
   }
 
 .image-size {
-    width: 200px;
+    width: 300px;
     height: 200px;
     object-fit: cover;
 }
 
+h1{
+  text-align: center;
+  justify-content: center;
+  background-color:tomato;
+}
+
+h2 {
+  text-align: center;
+  justify-content: center;
+  background-color: tomato;
+}
 /* .main-content {
     display: flex;
     justify-content: center;
