@@ -19,9 +19,8 @@ export default function HornedBeasts({ title, image_url, description }) {
         <span className="heart" onClick={handleFav}>
         ❤️
         </span>
+        <span>{fav} {fav === 1 ? "Favorite" : "Favorites"}</span>
       </p>
     </div>
   );
 }
-
-  
