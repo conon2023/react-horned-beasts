@@ -2,16 +2,16 @@ import "../App.css";
 import React, { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 
-export default function HornedBeasts({ title, image_url, description }) {
+export default function HornedBeast({ title, image_url, description }) {
   const [showModal, setShowModal] = useState(false);
-  const [favCount, setFavCount] = useState(0); // State for the favorite counter
+  const [favCount, setFavCount] = useState(0);
 
   const handleModal = () => {
     setShowModal(!showModal);
   };
 
   const handleFav = () => {
-    setFavCount(favCount + 1); // Increment the favorite counter when clicked
+    setFavCount((prevCount) => prevCount + 1);
   };
 
   return (
@@ -21,11 +21,15 @@ export default function HornedBeasts({ title, image_url, description }) {
         src={image_url}
         alt={title}
         onClick={handleModal}
-        style={{ width: "100px" }}
+        style={{ width: "100px" }} // You can set the initial size here
       />
       <p>{description}</p>
-      <p>Favorite Count: {favCount}</p> {/* Display the favorite count */}
-      <button onClick={handleFav}>Favorite</button> {/* Favorite counter button */}
+      
+      {/* Favorite Button */}
+      <Button variant="primary" onClick={handleFav}>
+        Favorite ({favCount})
+      </Button>
+
       {/* Modal */}
       <Modal show={showModal} onHide={handleModal} centered>
         <Modal.Body>
