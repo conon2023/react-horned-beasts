@@ -4,7 +4,7 @@ import React from "react";
 </div>
 function Footer({ title }) {
   return (
-    <footer>
+    <footer className="footer">
       <h2> &#169; Chidi Ononye </h2>
     </footer>
   );

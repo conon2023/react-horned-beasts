@@ -1,11 +1,21 @@
-import React from "react";
 import hornedBeastsData from "../Data/hornedBeastsData"; 
-
-import HornedBeast from "./HornedBeasts";
+import HornedBeasts from "./HornedBeasts";
+import React, { useState } from "react";
+import { Form } from "react-bootstrap";
+import FilterDropdown from "./FilterDropdown";
 
 const Gallery = () => {
+  const [selectedHornCount, setSelectedHornCount] = useState("all");
 
-  const hornedBeasts = hornedBeastsData.map((beast) => (
+  const handleHornCountChange = (selectedCount) => {
+    setSelectedHornCount(selectedCount);
+  };
+
+  const filteredHornedBeasts = selectedHornCount === "all"
+    ? hornedBeastsData
+    : hornedBeastsData.filter((beast) => beast.horns === parseInt(selectedHornCount));
+
+  const hornedBeasts = filteredHornedBeasts.map((beast) => (
     <HornedBeast
       key={beast._id}
       title={beast.title}
@@ -14,7 +24,17 @@ const Gallery = () => {
     />
   ));
 
-  return <div>{hornedBeasts}</div>;
+  return (
+    <div>
+      <FilterDropdown
+        selectedHornCount={selectedHornCount}
+        onHornCountChange={handleHornCountChange}
+      />
+      {hornedBeasts}
+    </div>
+  );
 };
 
 export default Gallery;
+
+

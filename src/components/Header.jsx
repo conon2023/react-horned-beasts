@@ -2,7 +2,7 @@ import React from "react";
 
 function Header() {
   return (
-    <header>
+    <header className="header">
       <h1>HORNED BEASTS</h1>
     </header>
   );
