@@ -1,7 +1,7 @@
 import React from "react";
-import HornedBeasts from "./HornedBeasts"; 
+import HornedBeasts from "../HornedBeasts" 
 
-export default function Main({ data, handleModal, handleFav, favCounts }) {
+export default function Main({ data, handleModal }) {
   return (
     <div className="card--container">
       {data.map((beast, index) => (
@@ -11,8 +11,6 @@ export default function Main({ data, handleModal, handleFav, favCounts }) {
           image_url={beast.image_url}
           description={beast.description}
           handleModal={handleModal}
-          handleFav={handleFav}
-          fav={favCounts[beast.title] || 0}
         />
       ))}
     </div>
